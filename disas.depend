@@ -1,0 +1,112 @@
+# depslib dependency file v1.0
+1282018200 source:g:\c\disas\opcode.c
+
+1282860586 source:g:\c\disas\disas\x86.c
+	<stdio.h>
+	<string.h>
+	"opcode.h"
+	"instruction.h"
+
+1282930998 on.h"
+
+1283313126 g:\c\disas\disas\opcode.h
+	<stdio.h>
+
+1282930916 
+
+1282875652 source:g:\c\disas\disas\opcode.c
+	"opcode.h"
+
+1283129578 g:\c\disas\disas\instruction.h
+	"opcode.h"
+
+1283313012 source:g:\c\disas\disas\main.c
+	<stdio.h>
+	"adhesivedis.h"
+	<string.h>
+	<stdlib.h>
+
+1282927996 is.h"
+
+1283145734 g:\c\disas\disas\adhesivedis.h
+	"opcode.h"
+	"instruction.h"
+	"buildstr.h"
+
+1283229556 source:g:\c\disas\disas\adhesivedis.c
+	<stdio.h>
+	<string.h>
+	"opcode.h"
+	"instruction.h"
+	"readopcode.h"
+
+1282930938 e.h"
+
+1283034660 source:g:\c\disas\disas\printinstr.c
+	<stdio.h>
+	"opcode.h"
+	"instruction.h"
+
+1283260128 source:g:\c\disas\disas\tables\opcode.c
+	"../opcode.h"
+
+1282930594 .h"
+
+1283151134 source:g:\c\disas\disas\readopcode.c
+	<string.h>
+	"opcode.h"
+	"instruction.h"
+
+1282930916 g:\c\disas\disas\readopcode.h
+	"instruction.h"
+	"opcode.h"
+
+1282886098 source:/media/Lexar/C/disas/disas/printinstr.c
+	<stdio.h>
+	"opcode.h"
+	"instruction.h"
+
+1282951953 /media/Lexar/C/disas/disas/opcode.h
+	<stdio.h>
+
+1282869298 /media/Lexar/C/disas/disas/instruction.h
+	"opcode.h"
+
+1282930594 source:/media/Lexar/C/disas/disas/tables/opcode.c
+	"../opcode.h"
+
+1282950679 source:/media/Lexar/C/disas/disas/adhesivedis.c
+	<stdio.h>
+	<string.h>
+	"opcode.h"
+	"instruction.h"
+	"readopcode.h"
+
+1282930916 /media/Lexar/C/disas/disas/readopcode.h
+	"instruction.h"
+	"opcode.h"
+
+1282951680 source:/media/Lexar/C/disas/disas/main.c
+	<stdio.h>
+	"adhesivedis.h"
+
+1282861092 /media/Lexar/C/disas/disas/adhesivedis.h
+	"opcode.h"
+	"instruction.h"
+
+1282952228 source:/media/Lexar/C/disas/disas/readopcode.c
+	<string.h>
+	"opcode.h"
+	"instruction.h"
+
+1283313142 source:g:\c\disas\disas\buildstr.c
+	<string.h>
+	<stdio.h>
+	"opcode.h"
+	"instruction.h"
+
+1283313228 source:g:\c\disas\disas\tables\opcodegrp.c
+	"../opcode.h"
+
+1283145724 g:\c\disas\disas\buildstr.h
+

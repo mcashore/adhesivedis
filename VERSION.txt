@@ -1,0 +1,78 @@
+Adhesive Disassembler Version File
+
+Version 0.0.4: August 31, 2010
+    - added more functionality to build_string() (handles the SIB byte now, among other things)
+    - fixed various bugs in the opcode tables
+    - Adhesive Disassembler can now successfully disassemble the implementation of RC4 I wrote a while ago
+TODO:
+    - same as before, not gonna reiterate it
+
+
+---------------------------------------------
+
+
+Version 0.0.3: August 29, 2010
+    - added filed buildstr.c, true to it's name it turns a struct x86_instruction into a string
+    - still does a lot of things wrong:
+        - doesn't handle relative addresses properly
+        - doesn't handle pointers properly: i.e. it doesn't check the address_mode var and it doesn't care
+        - doesn't care about any prefixes at all
+        - DOESN'T EVEN HANDLE THE SIB BYTE! TODOTODOTODO
+    - but it works
+TODO:
+    - (all same as before, but reiterated at the top)
+    - add support for more opcodes
+        - finish support for one byte opcode groups / extensions
+        - add support for one byte opcodes with secondary opcodes (guess they should be called two byte opcodes, huh?)
+        - add support for 0F prepended opcodes
+        - add support for FPU, SSE, 3DNow! opcodes?
+    - make build_string() work better
+    - document (and improve) internal structures
+    - there's probably more that I can't think of right now.
+
+
+
+----------------------------------------------
+
+
+Version 0.0.2: August 27, 2010
+    - added (lame) support for opcode groups (extensions) that takes up too much memory
+    - slightly rearranged struct one_byte_opcode
+    - added a table enum for struct one_byte_opcode to determine what table the opcode uses if it doesn't belogn to said struct.
+    - encountered an instruction with a constant value (1) as it's operand.  I'm currently handling it in a pretty nasty way (I've just got a flag that says whether or not the operand has a constant value of 1...).  It should work but I'm definitely going to fix this in the future.
+
+TODO:
+    - improve my method of determing table, using an enum also takes up too much mem. (this will probably not be the main focus for a while, though [premature optimization is bad {did you see what I did with the brackets? :P}])
+    - add functionality to seperate "not implemented" and "invalid" instructions
+
+----------------------------------------------
+
+Version 0.0.1: August 26, 2010
+    - added functions that parse the instruction and gain all info possible
+
+    - functions improved:
+        - int parse_instruction(struct x86_instruction *instr, unsigned char *src);
+        - void print_instruction(struct x86_instruction *instr);
+
+    - functions added:
+        - int grab_values(struct x86_instruction *instr, unsigned char **src)
+        - int parse_operands(struct opcode *opcode, struct x86_instruction *instr, unsigned char **src)
+        - int parse_rm(struct operand *operand, struct modrm *modrm, enum mode address_mode)
+        - int read_opcode(struct opcode *opcode, unsigned char **src)
+
+TODO:
+    - test like there's no tomorrow, be sure there are no bugs
+    - still need to expand the opcode tables
+    - write code that turns the information on the opcode into a string
+
+--------------------------------------------
+
+Version 0.0.0: August 25, 2010
+    - finished limited one byte opcode table.
+
+TODO:
+    - add support for opcode extensions
+    - add support for secondary opcodes
+    - add support for 0x0F prefixed opcodes
+    - there's a useless operand3 member in the one byte struct,
+      I'll write a script to remove it soon.
